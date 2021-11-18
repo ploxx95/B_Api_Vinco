@@ -1,0 +1,19 @@
+{
+  "name": "vinco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ploxx95/Backend_VicoTest.git"
+  },
+  "author": "Alexander_Valladares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ploxx95/Backend_VicoTest/issues"
+  },
+  "homepage": "https://github.com/ploxx95/Backend_VicoTest#readme"
+}
