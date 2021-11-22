@@ -15,8 +15,15 @@ exports.getData = (req, res) => {
 
 //create User
 exports.postData = (req, res) => {
-  const sql_post = "INSERT INTO User(name) VALUES(?)";
-  const newUser = [req.body.name];
+  const sql_post =
+    "INSERT INTO User(name,role,course,score,age) VALUES(?,?,?,?,?)";
+  const newUser = [
+    req.body.name,
+    req.body.role,
+    req.body.course,
+    req.body.score,
+    req.body.age,
+  ];
   data_base.db.run(sql_post, newUser, (err) => {
     if (err) {
       httpError(res, err.message);
@@ -42,8 +49,15 @@ exports.getDataById = (req, res) => {
 //EDIT User
 exports.editData = (req, res) => {
   const ID = req.params.id;
-  const user_data = [req.body.name, ID];
-  sql_edit = `UPDATE User SET name=? WHERE (id=?)`;
+  const user_data = [
+    req.body.name,
+    req.body.role,
+    req.body.course,
+    req.body.score,
+    req.body.age,
+    ID,
+  ];
+  sql_edit = `UPDATE User SET name=?,role=?,course=?,score=?,age=? WHERE (id=?)`;
   data_base.db.run(sql_edit, user_data, (err, rows) => {
     if (err) {
       httpError(res, err.message);
