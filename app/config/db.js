@@ -12,7 +12,7 @@ const db = new sqlite3.Database(db_file, (err) => {
 });
 
 // Create Table if not Exist
-const sql_create = `CREATE TABLE IF NOT EXISTS User(User_Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Name VARCHAR (100) NOT NULL)`;
+const sql_create = `CREATE TABLE IF NOT EXISTS User(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, name VARCHAR (100) NOT NULL)`;
 db.run(sql_create, (err) => {
   if (err) {
     console.log(err);
