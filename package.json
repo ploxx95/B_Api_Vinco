@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ploxx95/Backend_VicoTest/issues"
   },
-  "homepage": "https://github.com/ploxx95/Backend_VicoTest#readme"
+  "homepage": "https://github.com/ploxx95/Backend_VicoTest#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  }
 }
