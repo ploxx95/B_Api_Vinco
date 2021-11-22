@@ -57,7 +57,12 @@ exports.editData = (req, res) => {
     req.body.age,
     ID,
   ];
-  sql_edit = `UPDATE User SET name=?,role=?,course=?,score=?,age=? WHERE (id=?)`;
+  sql_edit = `UPDATE User SET name=?,
+  role=?,
+  course=?,
+  score=?,
+  age=? 
+  WHERE (id=?)`;
   data_base.db.run(sql_edit, user_data, (err, rows) => {
     if (err) {
       httpError(res, err.message);
